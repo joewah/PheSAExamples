@@ -1,0 +1,32 @@
+plugins {
+    // Apply the java-library plugin to add support for Java Library
+    id 'java'
+    id 'eclipse'
+	id 'application'
+
+}
+
+def thisVersion = '0.0.1'; 
+
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
+ 
+repositories {
+    mavenCentral()
+} 
+
+application {
+	mainClassName = 'com.idorsia.research.chem.phesa.App'
+}
+
+dependencies {
+	implementation 'com.actelion.research:openchemlib:2023.12.1'
+}
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    resolutionStrategy.cacheDynamicVersionsFor 0, 'seconds'
+}
+
+
+

@@ -1,0 +1,43 @@
+<datawarrior-fileinfo>
+<version="3.1">
+<rowcount="00000000001">
+<application="DWARFileHandler">
+</datawarrior-fileinfo>
+<column properties>
+<columnName="Structure">
+<columnProperty="specialType	idcode">
+<columnName="idcoordinates2D">
+<columnProperty="parent	Structure">
+<columnProperty="specialType	idcoordinates2D">
+<columnName="FragFp">
+<columnProperty="parent	Structure">
+<columnProperty="specialType	FragFp">
+<columnProperty="version	1.2.1">
+<columnName="idcoordinates3D">
+<columnProperty="parent	Structure">
+<columnProperty="specialType	idcoordinates3D">
+</column properties>
+Structure	idcoordinates2D	FragFp	idcoordinates3D	Name
+fcwh`BDLdWhFlfTyEEEHecEDcdeLdbLbejjj`hBijjDXQD@	#q@ggfa{VvTftWYPbd`KZjqpGsiXeZ}zDq~TUiwEgxzTwLntgBj]uJuchO@@Co|RHqXRwBo[YLYH]BSOzyig}}ubWNkjFKbBBJIfmsI]MSakUOKJ~{qxNCm?qnVmol{@oY]ul^{@oY\FndiX]SbH]wSEVyBNlVWZtCgcMAO^abbWxdx]LXR{MXKR?}se{nSfN_ees{n{fmxhVpsp_JP?Im^~ic`iWz_ZVRoUdJG[w\QArELctf[GtgaTru]VIAwPTN{ejLkLKeP|xaTtjmRUjV\RttGuhdKLvenOYkD?imrFfC\dg|RSJIO]dfdrLMQTfEFcFYRmXLHOriqekbXcyFrqWEtgHTSE@aman\ubmv]yxeMQtKESj|sZW\YE{Y]WgsiQlLmevvK|GeMNHzypNVNYt]z_hsgEUMfZUJAbvL^TEtwkoKMCu{]ZtzWZmMPQyEkQiY]O[Ip[FJ_o[[dvQAccDv~`YID[FTkCnvXWjAKeg\bsTzs\SSWbG~zwfUGfmkbykG@@dAGpD		#q@ggfa{VvTftWYPbd`KZjqpGsiXeZ}zDq~TUiwEgxzTwLntgBj]uJuchO@@Co|RHqXRwBo[YLYH]BSOzyig}}ubWNkjFKbBBJIfmsI]MSakUOKJ~{qxNCm?qnVmol{@oY]ul^{@oY\FndiX]SbH]wSEVyBNlVWZtCgcMAO^abbWxdx]LXR{MXKR?}se{nSfN_ees{n{fmxhVpsp_JP?Im^~ic`iWz_ZVRoUdJG[w\QArELctf[GtgaTru]VIAwPTN{ejLkLKeP|xaTtjmRUjV\RttGuhdKLvenOYkD?imrFfC\dg|RSJIO]dfdrLMQTfEFcFYRmXLHOriqekbXcyFrqWEtgHTSE@aman\ubmv]yxeMQtKESj|sZW\YE{Y]WgsiQlLmevvK|GeMNHzypNVNYt]z_hsgEUMfZUJAbvL^TEtwkoKMCu{]ZtzWZmMPQyEkQiY]O[Ip[FJ_o[[dvQAccDv~`YID[FTkCnvXWjAKeg\bsTzs\SSWbG~zwfUGfmkbykG@@dAGpD	BDV_1_3L5D
+<datawarrior properties>
+<columnWidth_Table_Structure="250">
+<detailView="height[Data]=0.5;height[Structure]=0.5">
+<mainView="Table">
+<mainViewCount="5">
+<mainViewDockInfo0="root">
+<mainViewDockInfo1="Table	center">
+<mainViewDockInfo2="2D View	center">
+<mainViewDockInfo3="3D View	center">
+<mainViewDockInfo4="Structures	center">
+<mainViewName0="Table">
+<mainViewName1="2D View">
+<mainViewName2="3D View">
+<mainViewName3="Structures">
+<mainViewType0="tableView">
+<mainViewType1="2Dview">
+<mainViewType2="3Dview">
+<mainViewType3="structureView">
+<structureGridColumn_Structures="Structure">
+<structureGridColumns_Structures="6">
+<rowHeight_Table="120">
+</datawarrior properties>
