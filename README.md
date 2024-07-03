@@ -34,6 +34,14 @@ The descriptor generation step from ```DescriptorHandlerShape``` by default crea
 
 ```DescriptorHandlerShape(int maxConfs,double ppWeight)``` where the number of conformers and the pharmacophore weight for the similarity calculation can be adjusted. 
 
+After creating the PheSA descriptors (instances of ```PheSAMolecule```) the similarity and the optimal 3D alignment can be calculated:
+```
+double sim = dhs.getSimilarity(queryShape, candidateShape);
+StereoMolecule[] previousAlignment = dhs.getPreviousAlignment();
+StereoMolecule referenceMol = previousAlignment[0];
+StereoMolecule candidateMol = previousAlignment[1]
+```
+referenceMol and candidateMol can be written to SD-Files as demonstrated in the examples and visualized in any chemistry visualization program supporting .sdf imports. 
 
 ## Negative Binding Site Images
 
