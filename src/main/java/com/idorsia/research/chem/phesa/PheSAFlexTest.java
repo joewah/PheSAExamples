@@ -19,7 +19,9 @@ import com.actelion.research.chem.phesa.DescriptorHandlerShapeOneConf;
 import com.actelion.research.chem.phesa.PheSAMolecule;
 
 
-
+/**
+ * same as PheSATest, but dhs.setFlexible is set to true to enable flexible refinements
+ */
 public class PheSAFlexTest {
 
 	public static void align() throws URISyntaxException, UnsupportedEncodingException, FileNotFoundException, IOException {

@@ -20,6 +20,9 @@ import com.actelion.research.chem.phesa.PheSAMolecule;
 
 public class PheSATest {
 
+	/**
+	 * parses a DWAR File with a 3D bioactive conformation and aligns a set of molecules on it
+	 */
 	public static void align() throws URISyntaxException, UnsupportedEncodingException, FileNotFoundException, IOException {
 		File queryFile =  new File(PheSATest.class.getClassLoader().getResource("dude_bace1_crystal_ligand.dwar").toURI());
 		File libFile = new File(PheSATest.class.getClassLoader().getResource("dude_bace1_actives_final.dwar").toURI());
@@ -30,11 +33,12 @@ public class PheSATest {
 		//DescriptorHandlerOneConf should be used for the query molecule, so that the 
 		//input 3D coordinates are taken and no coordinates are generated
 		DescriptorHandlerShapeOneConf dhsOC = new DescriptorHandlerShapeOneConf();
+		//for the candidate molecules, the standard DescriptorHandlerShape should be used, which calculates conformers
 		DescriptorHandlerShape  dhs = new DescriptorHandlerShape();
 		PheSAMolecule refVol = dhsOC.createDescriptor(query);
 		PheSAMolecule refVolConfGen = dhs.createDescriptor(query);
 		double sim = dhs.getSimilarity(refVol, refVolConfGen);
-		System.out.println(sim);
+		//self-alignment check: align generated conformers of the query on the original 3D input structure
 		StereoMolecule[] previousAlignment = dhs.getPreviousAlignment();
 		List<StereoMolecule> alignedMols = new ArrayList<>();
 		alignedMols.add(previousAlignment[0]);
@@ -50,12 +54,10 @@ public class PheSATest {
 			alignedMols.add(previousAlignment[1]);
 		}
 		
-		
+		//write the 3D alignments to an SD-File
 		try(BufferedWriter structureWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("aligned.sdf"), "utf-8"))){
 				for(StereoMolecule optimized: alignedMols) {
-					MolfileCreator mfc = new MolfileCreator(optimized,false);
-					mfc.writeMolfile(structureWriter);
-					structureWriter.write(" \n" );
+					Utils.writeMoleculeRecord(structureWriter, optimized);
 					structureWriter.write("$$$$ \n" );
 				}
 				
