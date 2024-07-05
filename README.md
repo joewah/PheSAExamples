@@ -86,10 +86,10 @@ shapeDocking.dock(toDock)
 Which return a List of aligned StereoMolecules sorted by decreasing score. ```ShapeDockingTest```demonstrates how to use the shape-based docking. 
 
 
-### Starting an own Virtual Screening Campaign
+## Starting an own Virtual Screening Campaign
 
 Since the most expensive step in the PheSA workflow is to create the conformers of the screening library, it can save computational resources to precalculate them
-and store them into a file. The PheSA DescriptorHandler contains methods to encode and decode instances of ```PheSAMolecule```. Which is a full representation of shape and
+and store them into a file, so that they can be reused again for subsequent screenings. The PheSA DescriptorHandler contains methods to encode and decode instances of ```PheSAMolecule```. Which is a full representation of shape and
 pharmacophore of a conformational ensemble (if ```DescriptorHandlerShape```was used as opposed to ```DescriptorHandlerShapeOneConf```).
 
 ```
@@ -98,7 +98,7 @@ PheSAMolecule candidateShape = dhs.createDescriptor(candidateMol);
 String encodedShape = dhs.encode(candidateShape);
 candidateShape = dhs.decode(encodedShape);
 ```
-## Parallelization of the calculation
+### Parallelization of the calculation
 
 The exeuction of both PheSA descriptor generation and PheSA similarity calculation can be dramatically speeded up by using Java Multithreading. 
 The ```DescriptorHandlerShape```is not thread-safe, so every thread requires it's own copy of this class. 
