@@ -43,6 +43,20 @@ StereoMolecule candidateMol = previousAlignment[1]
 ```
 referenceMol and candidateMol can be written to SD-Files as demonstrated in the examples and visualized in any chemistry visualization program supporting .sdf imports. 
 
+For using flexible refinement of the alignments, PheSAFlex can be activated via: 
+
+```
+dhs.setFlexible(true)
+```
+
+Further control over the PheSA parameters and settings can be exerted via the ```PheSASetting```class, where for example the triangle alignments can be turned off
+for faster performance:
+
+```
+PheSASetting setting = new PheSASetting();
+setting.setUseTriangle(false);
+```
+
 ## Negative Binding Site Images
 
 To create shape and pharmacophore representation of the receptor binding site, we rely on the ```NegativeReceptorImageCreator```class: 
